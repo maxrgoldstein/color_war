@@ -249,7 +249,7 @@ black_combined_war = combined_war[(combined_war["name_1_color"] == "black") | (c
 black_combined_war = black_combined_war.assign(color = "black")
 grey_combined_war = combined_war[(combined_war["name_1_color"] == "grey") | (combined_war["name_2_color"] == "grey") | (combined_war["name_3_color"] == "grey") | (combined_war["name_4_color"] == "grey")]
 grey_combined_war = grey_combined_war.assign(color = "grey")
-color_combined_war = pd.concat([white_combined_war,brown_combined_war,green_combined_war,blue_combined_war,blue_combined_war,black_combined_war,grey_combined_war])
+color_combined_war = pd.concat([white_combined_war,brown_combined_war,green_combined_war,blue_combined_war,black_combined_war,grey_combined_war])
 color_combined_war = color_combined_war[["Name","PlayerId","color","WAR"]]
 colors = ["white","brown","green","blue","black","grey"]
 #for color in colors:
