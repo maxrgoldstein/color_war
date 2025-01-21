@@ -258,6 +258,6 @@ color_war = color_combined_war.groupby("color")["WAR"].sum().reset_index()
 import matplotlib.pyplot as plt
 plt.bar(color_war["color"], color_war["WAR"], color = color_war["color"], edgecolor = "black")
 plt.title("Color WAR")
-plt.xlabel("color")
+plt.xlabel("color in name")
 plt.ylabel("fWAR")
 plt.show()
