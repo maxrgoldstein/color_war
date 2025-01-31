@@ -31,10 +31,10 @@ war = war.groupby(["Name","spaces","PlayerId"])["WAR"].sum().reset_index()
     #n_spaces_war = war[war["spaces"] == n_spaces]
     #print(n_spaces_war.sort_values(by = "WAR", ascending = False).head(3))
 war_1_space = war[war["spaces"] == 1]
-Names = war_1_space["Name"]
+names = war_1_space["Name"]
 names_1 = []
 names_2 = []
-for name in Names:
+for name in names:
     split_name = name.split(" ")
     name_1 = split_name[0]
     names_1.append(name_1)
@@ -63,11 +63,11 @@ name_2_colors = []
 coloring(name_2_colors,names_2)
 war_1_space = war_1_space.assign(name_1_color = name_1_colors, name_2_color = name_2_colors, name_3_color = "", name_4_color = "")
 war_2_spaces = war[war["spaces"] == 2]
-Names = war_2_spaces["Name"]
+names = war_2_spaces["Name"]
 names_1 = []
 names_2 = []
 names_3 = []
-for name in Names:
+for name in names:
     split_name = name.split(" ")
     name_1 = split_name[0]
     names_1.append(name_1)
@@ -83,12 +83,12 @@ name_3_colors = []
 coloring(name_3_colors,names_3)
 war_2_spaces = war_2_spaces.assign(name_1_color = name_1_colors, name_2_color = name_2_colors, name_3_color = name_3_colors, name_4_color = "")
 war_3_spaces = war[war["spaces"] == 3]
-Names = war_3_spaces["Name"]
+names = war_3_spaces["Name"]
 names_1 = []
 names_2 = []
 names_3 = []
 names_4 = []
-for name in Names:
+for name in names:
     split_name = name.split(" ")
     name_1 = split_name[0]
     names_1.append(name_1)
