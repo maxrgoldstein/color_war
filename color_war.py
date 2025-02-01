@@ -109,9 +109,9 @@ coloring(name_4_colors,names_4)
 war_3_spaces = war_3_spaces.assign(name_1_color = name_1_colors, name_2_color = name_2_colors, name_3_color = name_3_colors, name_4_color = name_4_colors)
 war = pd.concat([war_1_space,war_2_spaces,war_3_spaces])
 name_1_color = war["name_1_color"]
-name_1_color_value = [1 if (color != "colorless") & (color != "") else 0 for color in name_1_color]
+name_1_color_value = [1 if color != "colorless" else 0 for color in name_1_color]
 name_2_color = war["name_2_color"]
-name_2_color_value = [1 if (color != "colorless") & (color != "") else 0 for color in name_2_color]
+name_2_color_value = [1 if color != "colorless" else 0 for color in name_2_color]
 name_3_color = war["name_3_color"]
 name_3_color_value = [1 if (color != "colorless") & (color != "") else 0 for color in name_3_color]
 name_4_color = war["name_4_color"]
