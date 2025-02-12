@@ -133,7 +133,7 @@ grey_war = war[(war["name_1_color"] == "grey") | (war["name_2_color"] == "grey")
 grey_war = grey_war.assign(color = "grey")
 color_war = pd.concat([white_war,brown_war,green_war,blue_war,black_war,grey_war])
 color_war = color_war[["Name","PlayerId","color","WAR"]]
-color_war.to_csv("color_war.csv")
+#color_war.to_csv("color_war.csv")
 colors = ["white","brown","green","blue","black","grey"]
 for color in colors:
     print(color_war[color_war["color"] == color].sort_values(by = "WAR", ascending = False).head(3))
