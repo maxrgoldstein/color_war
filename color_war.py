@@ -5,8 +5,7 @@ blue = "Blue"
 black = "Black"
 grey = ["Gray","Grey"]
 import pandas as pd
-#download FanGraphs.com leaderboard for career batting WAR. I moved the file to a color folder within a MLB folder on my desktop
-batter_war = pd.read_csv("~/Desktop/MLB/color/fangraphs-leaderboards.csv")
+batter_war = pd.read_csv("fangraphs-leaderboards.csv")
 batter_names = batter_war["Name"]
 spaces = []
 for name in batter_names:
@@ -15,8 +14,7 @@ for name in batter_names:
 #print(max(spaces))
 batter_war = batter_war.assign(spaces = spaces)
 batter_war = batter_war[["Name","spaces","PlayerId","WAR"]]
-#download FanGraphs.com leaderboard for career pitching WAR
-pitcher_war = pd.read_csv("~/Desktop/MLB/color/fangraphs-leaderboards-2.csv")
+pitcher_war = pd.read_csv("fangraphs-leaderboards-2.csv")
 pitcher_names = pitcher_war["Name"]
 spaces = []
 for name in pitcher_names:
