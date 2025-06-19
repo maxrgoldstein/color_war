@@ -115,7 +115,7 @@ name_3_color_value = [1 if (color != "colorless") & (color != "") else 0 for col
 name_4_color = war.name_4_color
 name_4_color_value = [1 if (color != "colorless") & (color != "") else 0 for color in name_4_color]
 war = war.assign(name_1_color_value = name_1_color_value, name_2_color_value = name_2_color_value, name_3_color_value = name_3_color_value, name_4_color_value = name_4_color_value)
-war["color_value"] = war.name_1_color_value+war.name_2_color_value+war.name_3_color_value+war.name_4_color_value
+war.color_value = war.name_1_color_value+war.name_2_color_value+war.name_3_color_value+war.name_4_color_value
 #print(max(war.color_value))
 white_war = war[(war.name_1_color == "white") | (war.name_2_color == "white") | (war.name_3_color == "white") | (war.name_4_color == "white")]
 white_war = white_war.assign(color = "white")
